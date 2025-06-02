@@ -58,7 +58,7 @@ export function registerListTasksTool(server) {
 				// Resolve the path to tasks.json using new path utilities
 				let tasksJsonPath;
 				try {
-					tasksJsonPath = resolveTasksPath(args, session);
+					tasksJsonPath = resolveTasksPath(args, log);
 				} catch (error) {
 					log.error(`Error finding tasks.json: ${error.message}`);
 					return createErrorResponse(
